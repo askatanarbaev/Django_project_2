@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Edit posts {% endblock %}
+
+{% block content %}
+    <form method="post" class="mb-4">
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">Edit</button>
+    </form>
+    
+{% endblock %}
